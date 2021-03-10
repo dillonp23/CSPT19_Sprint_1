@@ -158,3 +158,16 @@ For this challenge, "y" is not considered a vowel.
 
 [output] string
 """
+
+def csRemoveTheVowels(input_str):
+
+    # create a reference string with vowels
+    vowels = "aeiou"
+    
+    # can use the list comprehension syntax here like previous challenge
+    # use "".join() to use remove/replace the letter with empty string
+    # ensure letter is compared to vowels ignoring case
+    return "".join(letter for letter in input_str if letter.lower() not in vowels)
+
+
+print(csRemoveTheVowels("Lambda School is awesome!"))
