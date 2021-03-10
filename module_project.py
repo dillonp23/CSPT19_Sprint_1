@@ -98,3 +98,12 @@ The input string will only contain alpha characters.
 
 [output] string
 """
+
+def csOppositeReverse(txt):
+    # Use string splicing with bracket syntax to return string in opposite order
+    # Use the 'swapcase' method to switch from lower->upper and upper->lower
+    return txt[::-1].swapcase()
+
+print(csOppositeReverse("Hello World"))
+print(csOppositeReverse("ReVeRsE"))
+print(csOppositeReverse("Radar"))
