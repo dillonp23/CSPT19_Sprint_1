@@ -31,3 +31,22 @@ make_false(b)
 
 print(a)
 print(b)
+
+
+"""
+Control flow in Python
+    - if/elif/else blocks
+    - and/or operators
+"""
+
+def do_things(num):
+    if num == 1:
+        print("foo")
+    elif num == 2:
+        print("bar")
+    else:
+        print("foobar")
+
+do_things(1)
+do_things(2)
+do_things(3)
