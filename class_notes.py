@@ -101,3 +101,10 @@ new_slice = slice_list(my_list)
 print(my_list)
 print(new_slice)
 
+
+# List comprehensions
+# Can utilize the power of map, iterate and filter to simplify 
+# code for lists into single line
+a_string = "aaaabbbbccccc"
+new_list = [char for char in a_string if char == "a"]
+print(new_list)
