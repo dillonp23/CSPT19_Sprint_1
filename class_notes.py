@@ -108,3 +108,31 @@ print(new_slice)
 a_string = "aaaabbbbccccc"
 new_list = [char for char in a_string if char == "a"]
 print(new_list)
+
+
+"""
+Tuples are immutable
+- behave like numbers, booleans, etc in terms of pass by value
+- essentially immutable lists but not mutable methods (append, pop, etc)
+"""
+my_tuple = (1, 2, 3, 1)
+
+print(my_tuple)
+print(len(my_tuple))
+print(my_tuple[1])
+
+
+"""
+Dictionaries
+
+-key/value pairs
+-value can be any data type
+-mutable, so pass by reference
+-dictionaries are collections so we can iterate through them (for loops)
+"""
+
+my_dict = {1: "a", 2: "b", 3: "3"}
+print(my_dict)
+
+for item in my_dict:
+    print(f"key: {item}, value: {my_dict[item]}")
