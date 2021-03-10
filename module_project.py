@@ -12,6 +12,7 @@ Exercise 1: What are the steps in Lambda's U.P.E.R process?
 
 
 
+
 """
 Exercise 2: What to do in the "Plan" step of UPER? (multiple choice question)
 
@@ -22,6 +23,7 @@ Tips:
     - identify issues or challenges and determine whether you need to go back 
     in order to the understand the problem and/or ask more questions in "U" step
 """
+
 
 
 
@@ -81,6 +83,7 @@ print(csAlphanumericRestriction("12c3"))
 
 
 
+
 """
 Exercise 4: Write a function that takes a string as input and returns that string in reverse order, with the opposite casing for each character within the string.
 
@@ -136,3 +139,22 @@ def csSquareAllDigits(n):
     return int("".join(str(int(char)**2) for char in num_string))
 
 print(csSquareAllDigits(9119))
+
+
+
+
+"""
+Exercise 6: Given a string, return a new string with all the vowels removed.
+
+Examples:
+
+csRemoveTheVowels("Lambda School is awesome!") -> "Lmbd Schl s wsm!"
+Notes:
+
+For this challenge, "y" is not considered a vowel.
+[execution time limit] 4 seconds (py3)
+
+[input] string input_str
+
+[output] string
+"""
