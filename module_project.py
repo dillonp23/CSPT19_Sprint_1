@@ -20,3 +20,45 @@ Tips:
     - identify issues or challenges and determine whether you need to go back 
     in order to the understand the problem and/or ask more questions in "U" step
 """
+
+
+"""
+Exercise 3: Create a function that returns True if the given string has any of the following:
+
+-Only letters and no numbers.
+-Only numbers and no letters.
+-If a string has both numbers and letters or contains characters that don't fit into any category, return False.
+
+Examples:
+
+csAlphanumericRestriction("Bold") ➞ True
+csAlphanumericRestriction("123454321") ➞ True
+csAlphanumericRestriction("H3LL0") ➞ False
+Notes:
+
+Any string that contains spaces or is empty should return False.
+[execution time limit] 4 seconds (py3)
+
+[input] string input_str
+[output] boolean
+"""
+
+def csAlphanumericRestriction(input_str):
+    # Can use Python built in api to check if numeric
+    # i.e. will return true if all numbers in str
+    if input_str.isnumeric():
+        return True
+    
+    # If not then iterate through characters and ensure all are letters
+    # can use 'AND' keyword combining if statements
+    # if char_in_str.isnumeric() == FALSE and char_in_str.isalnum()
+    
+    # Using this process will ensure that the characters are alphanumeric,
+    # but will return False if a number is included
+    for char in input_str:
+        if char.isnumeric() == False and char.isalnum():
+            continue
+        else:
+            return False
+    
+    return True
