@@ -124,3 +124,15 @@ csSquareAllDigits(2483) -> 416649 because 2^2 = 4, 4^2 = 16, 8^2 = 64, and 3^2 =
 
 [output] integer
 """
+
+def csSquareAllDigits(n):
+    # convert the int into a string object
+    # iterate through each character of the string and square it
+    # use result to build new str, convert to int and return
+    
+    num_string = str(n)
+    
+    # can use list comprehension to reduce the functionality and number of steps
+    return int("".join(str(int(char)**2) for char in num_string))
+
+print(csSquareAllDigits(9119))
