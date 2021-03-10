@@ -10,7 +10,6 @@ list_1 = [8, 24, 94, 9, 1, 3, 7]
 print(sorted_list(list_1))
 
 
-
 """
 Exercise 2: Create a function that takes a string and checks if it has same number of x's and o's
 - return boolean
@@ -51,21 +50,3 @@ print(XO_2("xoX"))
 print(XO_2("xoxo"))
 print(XO_2("xOpsXOwqjxox"))
 print(XO_2("abc"))
-
-
-"""
-Create a function that applies a discount d to every number in the list
-
-    * Tip: Use list comprehensions!
-"""
-
-def get_discounts(nums, percentage):
-    # Convert discount to a number ignoring the percentage sign
-    #  i.e. everything up to the last character which is "%"
-    discount = int(percentage[:-1]) / 100
-    return [n * discount for n in nums]
-
-print(get_discounts([10, 20, 30, 40, 50, 60, 70], "10%"))
-print(get_discounts([10, 20, 30, 40, 50, 60, 70], "30%"))
-print(get_discounts([10, 20, 30, 40, 50, 60, 70], "40%"))
-print(get_discounts([10, 20, 30, 40, 50, 60, 70], "90%"))
