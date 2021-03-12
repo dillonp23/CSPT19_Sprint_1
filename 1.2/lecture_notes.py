@@ -79,6 +79,11 @@ def numIdenticalPairs(nums):
         return int(max_pairs)
 
 
+print(numIdenticalPairs([1,2,3,1,1,3])) # expected: 4
+print(numIdenticalPairs([1,1,1,1])) # expected: 6
+print(numIdenticalPairs([1,2,3])) # expected: 0
+
+
 
 """
 Exercise 2: "1672. Richest Customer Wealth" (https://leetcode.com/problems/richest-customer-wealth/)
@@ -110,3 +115,30 @@ Return the element repeated N times.
     Input: [1,2,3,3]
     Output: 3
 """
+
+def repeatedNTimes(nums):
+    # Given a list of nums, length of list is 2N, w/ N+1 unique elements, and one element (x) repeats N times
+    # length of list / 2 == the number of times (N) that the element (x) is repeated
+
+    n = len(nums) / 2
+
+    # we want to return the value (x) that is repeated N times
+    # use a dictionary with "x" as key and "count" as the value
+    dict = {}
+
+    for x in nums:
+        # if "x" in dict, increment, otherwise set dict[x] = 1
+        if x in dict:
+            dict[x] += 1
+        else:
+            dict[x] = 1
+    
+        # if the "count" == "n" then we'll return the key "x"
+        count = dict[x]
+
+        if count == n:
+            return x
+
+print(repeatedNTimes([1,2,3,3])) # expected: 3
+print(repeatedNTimes([2,1,2,5,3,2])) # expected: 2
+print(repeatedNTimes([5,1,5,2,5,3,5,4])) # expected: 5
