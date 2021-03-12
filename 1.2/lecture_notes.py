@@ -39,9 +39,8 @@ The U.P.E.R. Framework:
 
 
 
-
 """
-Exercise 1: Number of Good Pairs (https://leetcode.com/problems/number-of-good-pairs/)
+Exercise 1: "1512. Number of Good Pairs" (https://leetcode.com/problems/number-of-good-pairs/)
 
 Given an array of integers nums.
 
@@ -49,11 +48,10 @@ A pair (i,j) is called good if nums[i] == nums[j] and i < j.
 
 Return the number of good pairs.
 
-Example 1:
-
-Input: nums = [1,2,3,1,1,3]
-Output: 4
-Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
+** Example **
+    Input: nums = [1,2,3,1,1,3]
+    Output: 4
+    Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
 """
 
 def numIdenticalPairs(nums):
@@ -82,18 +80,33 @@ def numIdenticalPairs(nums):
 
 
 
-
 """
-Exercise 2: Richest Customer Wealth (https://leetcode.com/problems/richest-customer-wealth/)
+Exercise 2: "1672. Richest Customer Wealth" (https://leetcode.com/problems/richest-customer-wealth/)
 
 You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
 
 A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
 
-Input: accounts = [[1,2,3],[3,2,1]]
-Output: 6
-Explanation:
-1st customer has wealth = 1 + 2 + 3 = 6
-2nd customer has wealth = 3 + 2 + 1 = 6
-Both customers are considered the richest with a wealth of 6 each, so return 6.
+** Example **
+    Input: accounts = [[1,2,3],[3,2,1]]
+    Output: 6
+    Explanation:
+    1st customer has wealth = 1 + 2 + 3 = 6
+    2nd customer has wealth = 3 + 2 + 1 = 6
+    Both customers are considered the richest with a wealth of 6 each, so return 6.
+"""
+
+
+
+"""
+Exercise 3: "961. N-Repeated Element in Size 2N Array" (https://leetcode.com/problems/n-repeated-element-in-size-2n-array/)
+
+In a array A of size 2N, there are N+1 unique elements, and exactly one of these elements is repeated N times.
+
+Return the element repeated N times.
+
+
+** Example **
+    Input: [1,2,3,3]
+    Output: 3
 """
