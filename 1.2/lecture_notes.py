@@ -53,3 +53,27 @@ Input: nums = [1,2,3,1,1,3]
 Output: 4
 Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
 """
+
+def numIdenticalPairs(nums):
+        dict = {}
+
+        for i in nums:
+            if i in dict:
+                dict[i] += 1
+            else:
+                dict[i] = 1
+
+        max_pairs = 0
+
+        # Lets say we have a value repeated 4 times.
+        # Since we're looking at pairs, its like having 2 sets for each count, i.e. count^2
+        # But the value cannot be paired with itself, so only count-1 max
+        # Finally divide by 2 to get the number of pairs
+
+        # Since the value can only be a pair with everything but itself, it would look like:
+        # ((count^2 - count) / 2)
+
+        for count in dict.values():
+            max_pairs += ((count**2) - count) / 2
+
+        return int(max_pairs)
