@@ -108,19 +108,20 @@ Create a function that concatenates the number 7 to the end of every chord in a 
 #     return jazzy_chords
 
 
-# def csMakeItJazzy(chords):
-#     # n = letter for note in chord
-#     return [f"{n}7" if n[-1] != "7" else n for n in chords]
-
-
-# Would never actually do this, but just as a fun example:
 def csMakeItJazzy(chords):
     # n = letter for note in chord
-    return [(lambda n: f"{n}" if chords[-1] != "7" else n)(n) for n in chords]
+    return [f"{n}7" if n[-1] != "7" else n for n in chords]
+
+
+# # Would never actually do this, but just as a fun example:
+# def csMakeItJazzy(chords):
+#     # n = letter for note in chord
+#     return [(lambda n: f"{n}" if chords[-1] != "7" else n)(n) for n in chords]
 
 
 print(csMakeItJazzy(["G", "F", "C"]))
 print(csMakeItJazzy(["Dm", "G", "E", "A"]))
+print(csMakeItJazzy(["Dm", "G7", "E", "A"]))
 print(csMakeItJazzy(["F7", "E7", "A7", "Ab7", "Gm7", "C7"]))
 print(csMakeItJazzy([]))
 
@@ -195,9 +196,18 @@ Given a start integer and an ending integer (both inclusive), write a function t
 def csAnythingButFive(start, end):
     # convert int to string and check if "5" in string
     # return length of resulting list
-    
+
     return len([str(num) for num in range(start,end+1) if "5" not in str(num)])
 
+
+# def csAnythingButFive_Loop(start, end):
+#     nums = []
+
+#     for num in range(start,end+1):
+#         if "5" not in str(num):
+#             nums.append(num)
+
+#     return len(nums)
 
 print(csAnythingButFive(1, 5))
 print(csAnythingButFive(1, 9))
