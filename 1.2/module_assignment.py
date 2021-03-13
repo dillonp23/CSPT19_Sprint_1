@@ -123,3 +123,14 @@ print(csMakeItJazzy(["G", "F", "C"]))
 print(csMakeItJazzy(["Dm", "G", "E", "A"]))
 print(csMakeItJazzy(["F7", "E7", "A7", "Ab7", "Gm7", "C7"]))
 print(csMakeItJazzy([]))
+
+
+
+"""
+Exercise 4:
+
+Given a string of words, return the length of the shortest word(s).
+
+* Notes:
+- The input string will never be empty and you do not need to validate for different data types.
+"""
