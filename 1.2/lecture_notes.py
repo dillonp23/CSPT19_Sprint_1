@@ -107,45 +107,64 @@ the customer that has the maximum wealth.
         n == accounts[i].length
         1 <= m, n <= 50
         1 <= accounts[i][j] <= 100
-"""
-# Understand:
-# input is an array of customers, where each customer is represented by an array of bank accounts
-# for each customer get the sum of their bank accounts
-# return an int represting the amount of money that is in the wealthiest account
 
-# Plan:
-# store a max_wealth variable w/ init = 0
+
+* Understand:
+    - input is an array of customers, where each customer is represented by an array of bank accounts
+    - for each customer get the sum of their bank accounts
+    - return an int represting the amount of money that is in the wealthiest account
+
+* Plan:
+    def max_wealth_function(input_list):
+        # store a max_wealth variable w/ init = 0
+
+            # loop through the outer accounts array
+                # cust_accounts = accounts[index]
+
+                # loop through accounts and get sum
+
+                # if sum is > max, update max
+
+            # return max
+"""
 
 # Brute Force Solution:
-    # loop through the outer accounts array
-        # cust_accounts = accounts[index]
+# def maximumWealth(accounts):
+#     max_wealth = 0
 
-        # loop through accounts and get sum
+#     for index in range(len(accounts)):
+#         customer_accounts = accounts[index]
+#         wealth = 0
 
-        # if sum is > max, update max
-
-    # return max
-
-
-def maximumWealth(accounts):
-    max_wealth = 0
-
-    for index in range(len(accounts)):
-        customer_accounts = accounts[index]
-        wealth = 0
-
-        for item in customer_accounts:
-            wealth += item
+#         for item in customer_accounts:
+#             wealth += item
         
-        if wealth > max_wealth:
-            max_wealth = wealth
+#         if wealth > max_wealth:
+#             max_wealth = wealth
 
-    return max_wealth
+#     return max_wealth
 
-print(maximumWealth([[1,2,3],[3,2,1]]))
-print(maximumWealth([[1,2,3],[4,5,6]]))
-print(maximumWealth([[1,2],[0,0],[5,6]]))
-print(maximumWealth([[1,2,3]]))
+
+# Optimized Solution:
+# def maximumWealth(accounts):
+#     max_wealth = 0
+
+#     for index in range(len(accounts)):
+#         customer_wealth = sum(accounts[index])
+#         max_wealth = max(customer_wealth, max_wealth)
+
+#     return max_wealth
+
+
+# Fully Reduced Solution:
+def maximumWealth(accounts):
+    return max(map(sum, accounts))
+
+
+print(maximumWealth([[1,2,3],[3,2,1]])) # => expected: 6
+print(maximumWealth([[1,2,3],[4,5,6]])) # => expected: 15
+print(maximumWealth([[1,2],[0,0],[5,6]])) # => expected: 11
+print(maximumWealth([[1,2,3]])) # => expected: 6
 
 
 
