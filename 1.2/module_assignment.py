@@ -191,3 +191,19 @@ Given a start integer and an ending integer (both inclusive), write a function t
 - The output can contain the digit 5.
 - The start number will always be less than the end number (both numbers can also be negative).
 """
+
+def csAnythingButFive(start, end):
+    # convert int to string and check if "5" in string
+    # return length of resulting list
+    
+    return len([str(num) for num in range(start,end+1) if "5" not in str(num)])
+
+
+print(csAnythingButFive(1, 5))
+print(csAnythingButFive(1, 9))
+print(csAnythingButFive(4, 17))
+print(csAnythingButFive(1, 90))
+
+# csAnythingButFive(1, 5) => 1, 2, 3, 4, -> 4 (there are 4 integers in the range that do not contain the digit 5)
+# csAnythingButFive(1, 9) => 1, 2, 3, 4, 6, 7, 8, 9 -> 8
+# csAnythingButFive(4, 17) => 4,6,7,8,9,10,11,12,13,14,16,17 -> 12
