@@ -88,9 +88,11 @@ print(numIdenticalPairs([1,2,3])) # expected: 0
 """
 Exercise 2: "1672. Richest Customer Wealth" (https://leetcode.com/problems/richest-customer-wealth/)
 
-You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
+You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer 
+has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
 
-A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
+A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is 
+the customer that has the maximum wealth.
 
 ** Example **
     Input: accounts = [[1,2,3],[3,2,1]]
@@ -99,7 +101,51 @@ A customer's wealth is the amount of money they have in all their bank accounts.
     1st customer has wealth = 1 + 2 + 3 = 6
     2nd customer has wealth = 3 + 2 + 1 = 6
     Both customers are considered the richest with a wealth of 6 each, so return 6.
+
+    Constraints:
+        m == accounts.length
+        n == accounts[i].length
+        1 <= m, n <= 50
+        1 <= accounts[i][j] <= 100
 """
+# Understand:
+# input is an array of customers, where each customer is represented by an array of bank accounts
+# for each customer get the sum of their bank accounts
+# return an int represting the amount of money that is in the wealthiest account
+
+# Plan:
+# store a max_wealth variable w/ init = 0
+
+# Brute Force Solution:
+    # loop through the outer accounts array
+        # cust_accounts = accounts[index]
+
+        # loop through accounts and get sum
+
+        # if sum is > max, update max
+
+    # return max
+
+
+def maximumWealth(accounts):
+    max_wealth = 0
+
+    for index in range(len(accounts)):
+        customer_accounts = accounts[index]
+        wealth = 0
+
+        for item in customer_accounts:
+            wealth += item
+        
+        if wealth > max_wealth:
+            max_wealth = wealth
+
+    return max_wealth
+
+print(maximumWealth([[1,2,3],[3,2,1]]))
+print(maximumWealth([[1,2,3],[4,5,6]]))
+print(maximumWealth([[1,2],[0,0],[5,6]]))
+print(maximumWealth([[1,2,3]]))
 
 
 
