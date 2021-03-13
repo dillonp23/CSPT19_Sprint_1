@@ -169,3 +169,11 @@ Given an array of integers, return the sum of all the positive integers in the a
 - If the input_arr does not contain any positive integers, the default sum should be 0.
 
 """
+
+def csSumOfPositive(input_arr):
+    # utilze a list comprehension:
+    return sum([num for num in input_arr if num > 0])
+
+print(csSumOfPositive([1, 2, 3, -4, 5])) # => 1 + 2 + 3 + 5 => expected: 11
+print(csSumOfPositive([-3, -2, -1, 0, 1])) # => expected: 1
+print(csSumOfPositive([-3, -2])) # => expected: 0
