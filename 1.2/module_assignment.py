@@ -155,3 +155,17 @@ print(csShortestWord("not great programmer; just good programmer with great habi
 print(csShortestWord("Truth can only be found in one place: the code")) # expected: 2
 print(csShortestWord("Give man program frustrate him for day Teach man program frustrate him for lifetime")) # expected: 3
 print(csShortestWord("ZxuvWBoofsTUtasPIhsuCJjttHhBuuHZoxZk\tWZxAkjdCqDpML")) # expected: 13
+
+
+
+"""
+Exercise 5:
+Given an array of integers, return the sum of all the positive integers in the array.
+
+* Examples:
+- csSumOfPositive([1, 2, 3, -4, 5]) -> 1 + 2 + 3 + 5 = 11
+
+* Notes:
+- If the input_arr does not contain any positive integers, the default sum should be 0.
+
+"""
