@@ -48,3 +48,33 @@ Write a function that returns the groups in the school by year (as a string), se
     1 <= years <= 10
     1 <= groups <=26
 """
+import string
+
+def csSchoolYearsAndGroups(years, groups):
+    count = 0
+    alphabet = string.ascii_lowercase
+    
+    result_list = []
+    separator = ", "
+
+    # use for loop with range 1 up to "years"
+    # use a reference to lookup alphabet letter based on "groups" input
+    for year in range(1, years+1):
+        while count != groups:
+            combo = f"{year}{alphabet[count]}"
+            result_list.append(combo)
+            count += 1
+            
+        count = 0
+    
+    return separator.join(result_list)
+
+
+print(csSchoolYearsAndGroups(5, 3))
+print(csSchoolYearsAndGroups(7, 4))
+print(csSchoolYearsAndGroups(1, 8))
+print(csSchoolYearsAndGroups(8, 7))
+print(csSchoolYearsAndGroups(2, 2))
+
+# Expected behavior:
+# csSchoolYearsAndGroups(years = 7, groups = 4) => "1a, 1b, 1c, 1d, 2a, 2b, 2c, 2d, 3a, 3b, 3c, 3d, 4a, 4b, 4c, 4d, 5a, 5b, 5c, 5d, 6a, 6b, 6c, 6d, 7a, 7b, 7c, 7d"
