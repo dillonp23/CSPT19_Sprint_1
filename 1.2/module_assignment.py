@@ -177,3 +177,17 @@ def csSumOfPositive(input_arr):
 print(csSumOfPositive([1, 2, 3, -4, 5])) # => 1 + 2 + 3 + 5 => expected: 11
 print(csSumOfPositive([-3, -2, -1, 0, 1])) # => expected: 1
 print(csSumOfPositive([-3, -2])) # => expected: 0
+
+
+
+"""
+Exercise 6:
+Given a start integer and an ending integer (both inclusive), write a function that returns the count (not the sum) of all integers in the range (except integers that contain the digit 5).
+
+* Examples:
+- csAnythingButFive(1, 5) -> 1, 2, 3, 4, -> 4 (there are 4 integers in the range that do not contain the digit 5)
+
+* Notes:
+- The output can contain the digit 5.
+- The start number will always be less than the end number (both numbers can also be negative).
+"""
