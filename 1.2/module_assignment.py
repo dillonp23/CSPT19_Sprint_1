@@ -134,3 +134,20 @@ Given a string of words, return the length of the shortest word(s).
 * Notes:
 - The input string will never be empty and you do not need to validate for different data types.
 """
+def csShortestWord(input_str):
+    word_list = input_str.split()
+    shortest_length = len(word_list[0])
+    
+    # use the split built in string method to split words into list    
+    # iterate the spearated word list
+    for index in range(len(word_list)):
+        shortest_length = min(shortest_length, len(word_list[index]))
+
+    return shortest_length
+
+
+print(csShortestWord("Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live")) # expected: 1
+print(csShortestWord("not great programmer; just good programmer with great habits.")) # expected: 3
+print(csShortestWord("Truth can only be found in one place: the code")) # expected: 2
+print(csShortestWord("Give man program frustrate him for day Teach man program frustrate him for lifetime")) # expected: 3
+print(csShortestWord("ZxuvWBoofsTUtasPIhsuCJjttHhBuuHZoxZk\tWZxAkjdCqDpML")) # expected: 13
