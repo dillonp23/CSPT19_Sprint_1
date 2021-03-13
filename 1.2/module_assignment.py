@@ -94,18 +94,24 @@ Create a function that concatenates the number 7 to the end of every chord in a 
     - You can expect all the tests to have valid chords.
 """
 
-def csMakeItJazzy(chords):
-    # iterate list and add 7 anything that doesn't end in 7
-    # use string splicing to get last character, if not 7, then append it
-    jazzy_chords = []
+# def csMakeItJazzy(chords):
+#     # iterate list and add 7 anything that doesn't end in 7
+#     # use string splicing to get last character, if not 7, then append it
+#     jazzy_chords = []
     
-    for chord in chords:
-        if chord[-1] != "7":
-            chord += "7"
+#     for chord in chords:
+#         if chord[-1] != "7":
+#             chord += "7"
         
-        jazzy_chords.append(chord)
+#         jazzy_chords.append(chord)
     
-    return jazzy_chords
+#     return jazzy_chords
+
+
+def csMakeItJazzy(chords):
+    # n = letter for note in chord
+    return [f"{n}7" if n[-1] != "7" else n for n in chords]
+
 
 print(csMakeItJazzy(["G", "F", "C"]))
 print(csMakeItJazzy(["Dm", "G", "E", "A"]))
