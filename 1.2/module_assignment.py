@@ -13,3 +13,16 @@ Notes:
     Assume all names start with a capital letter and are lowercase thereafter (i.e. don't worry about finding "BOB" or "bob").
 """
 
+def csWhereIsBob(names):
+
+    for index in range(len(names)):
+        if names[index] == "Bob":
+            return index
+    
+    return -1
+
+print(csWhereIsBob(["Jimmy", "Layla", "Bob"])) # expected: => 2
+print(csWhereIsBob(["Bob", "Layla", "Kaitlyn", "Patricia"])) # expected: => 0
+print(csWhereIsBob(["Jimmy", "Layla", "James"])) # expected: => -1
+print(csWhereIsBob([""])) # expected: => -1
+print(csWhereIsBob([])) # expected: => -1
