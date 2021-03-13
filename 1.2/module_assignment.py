@@ -108,9 +108,15 @@ Create a function that concatenates the number 7 to the end of every chord in a 
 #     return jazzy_chords
 
 
+# def csMakeItJazzy(chords):
+#     # n = letter for note in chord
+#     return [f"{n}7" if n[-1] != "7" else n for n in chords]
+
+
+# Would never actually do this, but just as a fun example:
 def csMakeItJazzy(chords):
     # n = letter for note in chord
-    return [f"{n}7" if n[-1] != "7" else n for n in chords]
+    return [(lambda n: f"{n}" if chords[-1] != "7" else n)(n) for n in chords]
 
 
 print(csMakeItJazzy(["G", "F", "C"]))
