@@ -14,3 +14,15 @@ Sprint 1 Module 3: Time & Space Complexity
 
 """
 
+
+
+"""
+Exercise 1: "136. Single Number" (https://leetcode.com/problems/single-number/)
+
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+Follow up: Could you implement a solution with a linear runtime complexity and without using extra memory?
+
+* Example:
+    Input: nums = [2,2,1]
+    Output: 1
+"""
