@@ -67,7 +67,61 @@ Follow up: Could you implement a solution with a linear runtime complexity and w
 * Example:
     Input: nums = [2,2,1]
     Output: 1
+
+* UPER:
+    if single element in nums, return element
+
+    sort nums array
+    store var for index
+    store var for left (lhs) & right (rhs) hand side
+
+    iterate through sorted nums list:
+        set curr to nums[i]
+
+        if index == 1 and lhs != curr
+            return lhs
+
+        if nums[i] != lhs and nums[i] != rhs, 
+            return nums[i]
+            
+        else it means nums[i] == lhs or rhs
+            update lhs
+            iterate i
+            update rhs
 """
+
+def findSingleNumber(nums):
+    if len(nums) == 1:
+        return nums[0]
+        
+    nums.sort()
+
+    i = 1
+    lhs = nums[0]
+    rhs = nums[i+1]
+
+    while i < len(nums):
+        curr = nums[i]
+            
+        if i == 1 and lhs != curr:
+            return lhs
+
+        if curr != lhs and curr != rhs:
+            return curr
+        else:
+            lhs = curr
+            i += 1
+
+            try:
+                rhs = nums[i+1]
+            except:
+                rhs = None
+
+
+print(findSingleNumber([1]))
+print(findSingleNumber([2,2,1]))
+print(findSingleNumber([4,1,2,1,2]))
+print(findSingleNumber([0,3,1,4,2,3,1,2,4]))
 
 
 
@@ -101,6 +155,7 @@ def twoSum(nums, target):
 
     # simply return None if no two sum
     return None
+
 
 print(twoSum([3], 3))
 print(twoSum([1,2,3], 3))
