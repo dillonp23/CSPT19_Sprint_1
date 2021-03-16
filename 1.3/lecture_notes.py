@@ -43,3 +43,25 @@ Given an array of integers nums and an integer target, return indices of the two
     Output: [0,1]
     Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 """
+
+def twoSum(nums, target):
+    prev_nums = {}
+
+    for index in range(len(nums)):
+        first_num = nums[index]
+        second_num = target - first_num
+
+        if second_num in prev_nums:
+            index2 = prev_nums[second_num]
+            return [index2, index]
+        else:
+            prev_nums[first_num] = index 
+
+    # simply return None if no two sum
+    return None
+
+print(twoSum([3], 3))
+print(twoSum([1,2,3], 3))
+print(twoSum([1,1], 3))
+print(twoSum([1,9,4,23,16,43], 53))
+print(twoSum([1,4,8,9,3], 13))
