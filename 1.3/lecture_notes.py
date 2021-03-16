@@ -83,7 +83,7 @@ Follow up: Could you implement a solution with a linear runtime complexity and w
 
         if nums[i] != lhs and nums[i] != rhs, 
             return nums[i]
-            
+
         else it means nums[i] == lhs or rhs
             update lhs
             iterate i
@@ -118,10 +118,21 @@ def findSingleNumber(nums):
                 rhs = None
 
 
-print(findSingleNumber([1]))
-print(findSingleNumber([2,2,1]))
-print(findSingleNumber([4,1,2,1,2]))
-print(findSingleNumber([0,3,1,4,2,3,1,2,4]))
+# def findSingleNumber_BitwiseXOR(nums):
+#     a = 0
+    
+#     for i in nums:
+#         xor = a ^ i
+#         print(f"xor: {xor}")
+#         a = xor
+    
+#     return a
+
+
+print(findSingleNumber([1])) # expected: 1
+print(findSingleNumber([2,2,1])) # expected: 1
+print(findSingleNumber([4,1,2,1,2])) # expected: 4
+print(findSingleNumber([0,3,1,4,2,3,1,2,4])) # expected: 0
 
 
 
