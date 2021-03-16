@@ -1,16 +1,58 @@
 
+
 """
 Sprint 1 Module 3: Time & Space Complexity
 
-* Least Time/Space *
-- O(1): Constant
-- O(log n): Logarithmic - moves towards constant as input size grows
-- O(n): Linear - increases proportionally to input size
-- O(n log n)
-- O(n^2): Quadratic 
-- O(c^n): Exponential - increases exponentially as input size increases
-- O(n!): Factorial
-* Most Time/Space *
+
+* Best Time & Space Complexitity *
+
+    O(1): Constant
+        - runtime is entirely unaffected by the input size 
+        - excellent/ideal solution
+        
+        * example:
+            - indexing element in array
+
+    O(log n): Logarithmic 
+        - as input size increases, rate of growth (acceleration) will decrease 
+        - pretty good solution
+        
+        * example:
+            - binary search in data sets
+
+    O(n): Linear 
+        - runtime will grow proportionally to input size
+        - fair/average solution
+
+        * example:
+            - simple for loop iterating entire length of a list
+
+    O(n log n): Quasilinear
+        - runtime is a combination of linear and logarithmic
+        - much worse than linear, but not quite as bad as polynomial
+        - poor solution
+
+    O(n^c): Polynomial
+        - as input size increases, runtime will grow at a much faster rate
+        - might work for small inputs but is not a scalable solution
+        - very poor solution
+
+        * common variations:
+            - O(n^2): Quadratic
+            - O(n^3): Cubic
+
+        * example:
+            - nested for loops where each loop is O(n)
+
+    O(c^n): Exponential 
+        - runtime grows exponentially as input size increases
+        - very inefficient solution
+
+    O(n!): Factorial
+        - runtime grows at an astronomaically faster rate as input size increases
+        - exceptionally inefficient/worst solution
+
+* Worst Time & Space Complexitity *
 
 """
 
