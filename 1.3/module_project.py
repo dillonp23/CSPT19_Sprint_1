@@ -196,3 +196,31 @@ If there isn't a unique (non-repeating) character, return -1.
                 # else:
                     # dict[letter] = count
 """
+
+def csFirstUniqueChar(input_str):
+    letter_counts = {}
+    
+    for i in range(len(input_str)):
+        letter = input_str[i]
+        
+        if letter in letter_counts:
+            continue
+        else:
+            letter_count = input_str.count(letter)
+            
+            if letter_count == 1:
+                return i
+            else:
+                letter_counts[letter] = letter_count
+    
+    return -1
+
+
+long_test_string = "iqvaobnmweuylkctweghkwfekpbrdrgehfcsjjrnczwzicoug\
+    lzfqvckvwkevcsxgcrjkzqegyyzdmrepsqbjdzzmunpgnxtqotw"
+
+print(csFirstUniqueChar("lambdaschool")) # expected: 2
+print(csFirstUniqueChar("")) # expected: -1
+print(csFirstUniqueChar("ilovelambdaschool")) # expected: 0
+print(csFirstUniqueChar("vvv")) # expected: -1
+print(csFirstUniqueChar(long_test_string)) # expected: 3
