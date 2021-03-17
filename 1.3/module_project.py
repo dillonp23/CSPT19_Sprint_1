@@ -45,3 +45,16 @@ def do_a_couple_things(n):
 
     ** Total: O(n) - linear **
 """
+
+
+
+"""
+Exercise 3:
+
+Given two strings that include only lowercase alpha characters, str_1 and str_2, write a function that 
+returns a new sorted string that contains any character (only once) that appeared in str_1 or str_2.
+
+* Examples:
+    - csLongestPossible("aabbbcccdef", "xxyyzzz") -> "abcdefxyz"
+    - csLongestPossible("abc", "abc") -> "abc"
+"""
