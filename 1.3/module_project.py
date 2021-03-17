@@ -165,3 +165,34 @@ print(csFindAddedLetter("", "")) # expected: None
 print(csFindAddedLetter("", "b")) # expected: b
 print(csFindAddedLetter("bzp", "abzp")) # expected: a
 print(csFindAddedLetter("xqmxtheyvpdqounqmfyaqdqxwe", "xqmxtheyvpdqounqmfyaqxdqxwe")) # expected: x
+
+
+
+"""
+Exercise 6:
+
+Given a string, write a function that returns the index of the first unique (non-repeating) character. 
+If there isn't a unique (non-repeating) character, return -1.
+
+* Examples:
+    - csFirstUniqueChar(input_str = "lambdaschool") -> 2
+    - csFirstUniqueChar(input_str = "ilovelambdaschool") -> 0
+    - csFirstUniqueChar(input_str = "vvv") -> -1
+
+* Notes:
+    - input_str will only contain lowercase alpha characters.
+
+
+    *** UPER ***
+        # create a dict object to store letter for key and count for value
+        
+        # iterate through string using range(len())
+            # if letter in dict
+                # continue
+            # else
+                # count num of times letter appears in string
+                # if count == 1:
+                    #  return index of letter
+                # else:
+                    # dict[letter] = count
+"""
