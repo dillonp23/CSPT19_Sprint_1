@@ -71,12 +71,12 @@ def csLongestPossible(str_1, str_2):
     return str_2
 
 
-print(csLongestPossible("aabbbcccdef", "xxyyzzz")) # expected: "abcdefxyz"
-print(csLongestPossible("aretheyhere", "yestheyarehere")) # expected: "aehrsty"
-print(csLongestPossible("loopingisfunbutdangerous", "lessdangerousthancoding")) # expected: "abcdefghilnoprstu"
-print(csLongestPossible("inmanylanguages", "theresapairoffunctions")) # expected: "acefghilmnoprstuy"
-print(csLongestPossible("etxtxgxqxkrwu", "fvaqjrvnzeyed")) # expected: "adefgjknqrtuvwxyz"
-print(csLongestPossible("", "")) # expected: ""
+# print(csLongestPossible("aabbbcccdef", "xxyyzzz")) # expected: "abcdefxyz"
+# print(csLongestPossible("aretheyhere", "yestheyarehere")) # expected: "aehrsty"
+# print(csLongestPossible("loopingisfunbutdangerous", "lessdangerousthancoding")) # expected: "abcdefghilnoprstu"
+# print(csLongestPossible("inmanylanguages", "theresapairoffunctions")) # expected: "acefghilmnoprstuy"
+# print(csLongestPossible("etxtxgxqxkrwu", "fvaqjrvnzeyed")) # expected: "adefgjknqrtuvwxyz"
+# print(csLongestPossible("", "")) # expected: ""
 
 
 
@@ -108,3 +108,28 @@ that add up to the target.
         else:
             if the needed num not in dict then add it
 """
+
+def csSortedTwoSum(numbers, target):
+    visited_nums = {}
+
+    for i in range(len(numbers)):
+        curr_num = numbers[i]
+        needed_num = target - curr_num
+
+        if needed_num in visited_nums:
+            return [visited_nums[needed_num], i]
+        else:
+            visited_nums[curr_num] = i
+
+    return []
+
+
+long_test_list = [-97, -92, -84, -80, -77, -71, -59, -49, -37, -35, -23, 
+-10, -8, -3, 5, 23, 51, 57, 58, 71, 78, 82, 86, 94, 100]
+
+print(csSortedTwoSum([0,1], 1)) # expected: [0, 1]
+print(csSortedTwoSum([0,0], 1)) # expected: []
+print(csSortedTwoSum([3,8,12,16], 11)) # expected: [0, 1]
+print(csSortedTwoSum([3,4,5], 8)) # expected: [0, 2]
+print(csSortedTwoSum([0, 1, 2, 3, 4, 5, 6, 7], 13)) # expected: [6, 7]
+print(csSortedTwoSum(long_test_list, 27)) # expected: [6, 22]
