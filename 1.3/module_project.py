@@ -1,2 +1,26 @@
 
 # Sprint 1.3 CodeSignal Assignment - Time & Space Complexity
+
+
+"""
+Exercise 1: Multiple Choice
+
+Using Big O notation, what is correct classification of time complexity for the function below?
+
+def do_lots_of_things(items):
+    last = len(items) - 1 ## O(1) - constant
+    print(items[last]) ## O(1) - constant
+
+    middle = len(items) / 2 ## O(1) - constant
+    i = 0 ## O(1) - constant
+
+    while i < middle: ## O(n) - linear
+        print(items[i]) ## O(1) - constant
+        i += 1 ## O(1) - constant
+
+    for num in range(100): ## O(1) - constant
+        print(num) ## O(1) - constant
+
+
+    ** Total: O(n) - linear **
+"""
