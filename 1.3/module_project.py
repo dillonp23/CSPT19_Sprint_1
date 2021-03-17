@@ -71,12 +71,12 @@ def csLongestPossible(str_1, str_2):
     return str_2
 
 
-# print(csLongestPossible("aabbbcccdef", "xxyyzzz")) # expected: "abcdefxyz"
-# print(csLongestPossible("aretheyhere", "yestheyarehere")) # expected: "aehrsty"
-# print(csLongestPossible("loopingisfunbutdangerous", "lessdangerousthancoding")) # expected: "abcdefghilnoprstu"
-# print(csLongestPossible("inmanylanguages", "theresapairoffunctions")) # expected: "acefghilmnoprstuy"
-# print(csLongestPossible("etxtxgxqxkrwu", "fvaqjrvnzeyed")) # expected: "adefgjknqrtuvwxyz"
-# print(csLongestPossible("", "")) # expected: ""
+print(csLongestPossible("aabbbcccdef", "xxyyzzz")) # expected: "abcdefxyz"
+print(csLongestPossible("aretheyhere", "yestheyarehere")) # expected: "aehrsty"
+print(csLongestPossible("loopingisfunbutdangerous", "lessdangerousthancoding")) # expected: "abcdefghilnoprstu"
+print(csLongestPossible("inmanylanguages", "theresapairoffunctions")) # expected: "acefghilmnoprstuy"
+print(csLongestPossible("etxtxgxqxkrwu", "fvaqjrvnzeyed")) # expected: "adefgjknqrtuvwxyz"
+print(csLongestPossible("", "")) # expected: ""
 
 
 
@@ -153,3 +153,15 @@ Write a function that returns the letter that was added to str_2.
 * Notes:
     - str_1 and str_2 both consist of only lowercase alpha characters.
 """
+
+def csFindAddedLetter(str_1, str_2):
+    for char in str_2:
+        if str_1.count(char) != str_2.count(char):
+            return char
+
+
+print(csFindAddedLetter("bcde", "bcdfe")) # expected: f
+print(csFindAddedLetter("", "")) # expected: None
+print(csFindAddedLetter("", "b")) # expected: b
+print(csFindAddedLetter("bzp", "abzp")) # expected: a
+print(csFindAddedLetter("xqmxtheyvpdqounqmfyaqdqxwe", "xqmxtheyvpdqounqmfyaqxdqxwe")) # expected: x
