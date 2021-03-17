@@ -94,4 +94,17 @@ that add up to the target.
 * Notes:
     - Each input will have exactly one solution.
     - You may not use the same element twice.
+
+
+*** UPER *** 
+    use a dictionary to store the visited numbers: dict[value] = index
+    
+    iterate through list
+        for each number determine what the second number needed would be
+        use target - curr value to find needed num
+        
+        check if the needed num is in dict
+            return current index and index of other num (dict[needed_num] = index2)
+        else:
+            if the needed num not in dict then add it
 """
