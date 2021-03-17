@@ -77,3 +77,21 @@ print(csLongestPossible("loopingisfunbutdangerous", "lessdangerousthancoding")) 
 print(csLongestPossible("inmanylanguages", "theresapairoffunctions")) # expected: "acefghilmnoprstuy"
 print(csLongestPossible("etxtxgxqxkrwu", "fvaqjrvnzeyed")) # expected: "adefgjknqrtuvwxyz"
 print(csLongestPossible("", "")) # expected: ""
+
+
+
+"""
+Exercise 4:
+
+Given a sorted array (in ascending order) of integers and a target, write a function that finds the two integers 
+that add up to the target.
+
+* Examples:
+    - csSortedTwoSum([3,8,12,16], 11) -> [0,1]
+    - csSortedTwoSum([3,4,5], 8) -> [0,2]
+    - csSortedTwoSum([0,1], 1) -> [0,1]
+
+* Notes:
+    - Each input will have exactly one solution.
+    - You may not use the same element twice.
+"""
