@@ -24,3 +24,24 @@ def do_lots_of_things(items):
 
     ** Total: O(n) - linear **
 """
+
+
+
+"""
+Exercise 2: Multiple Choice
+
+Using Big O notation, what is correct classification of space complexity for the function below?
+
+def do_a_couple_things(n):
+    my_list = [] ## O(1) - constant (initialization of empty space is constant relative to n for now)
+    my_second_list = [0] * 26 ## O(1) - constant (remains same with growing input)
+
+    for _ in range(n):
+        my_list.append("lambda") ## O(n) - linear (increases proportionally to input size)
+        print(my_second_list[n % 25]) ## O(1) - constant
+
+    return my_list
+
+
+    ** Total: O(n) - linear **
+"""
