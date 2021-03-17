@@ -58,3 +58,22 @@ returns a new sorted string that contains any character (only once) that appeare
     - csLongestPossible("aabbbcccdef", "xxyyzzz") -> "abcdefxyz"
     - csLongestPossible("abc", "abc") -> "abc"
 """
+
+def csLongestPossible(str_1, str_2):
+    str_1 += str_2
+    str_1 = sorted(str_1)
+    str_2 = ""
+    
+    for char in str_1:
+        if char not in str_2:
+            str_2 += char
+            
+    return str_2
+
+
+print(csLongestPossible("aabbbcccdef", "xxyyzzz")) # expected: "abcdefxyz"
+print(csLongestPossible("aretheyhere", "yestheyarehere")) # expected: "aehrsty"
+print(csLongestPossible("loopingisfunbutdangerous", "lessdangerousthancoding")) # expected: "abcdefghilnoprstu"
+print(csLongestPossible("inmanylanguages", "theresapairoffunctions")) # expected: "acefghilmnoprstuy"
+print(csLongestPossible("etxtxgxqxkrwu", "fvaqjrvnzeyed")) # expected: "adefgjknqrtuvwxyz"
+print(csLongestPossible("", "")) # expected: ""
