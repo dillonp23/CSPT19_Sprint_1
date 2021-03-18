@@ -215,6 +215,27 @@ def csFirstUniqueChar(input_str):
     
     return -1
 
+"""
+Not a working solution yet below:
+
+def csFirstUniqueChar(input_str):
+    if len(input_str) == 1:
+        return 0
+
+    for i in range(len(input_str)):
+
+        if i+1 == len(input_str):
+            return -1
+
+        letter = input_str[i]
+
+        try:
+            input_str.index(letter, i+1)
+        except:
+            return i
+
+    return -1        
+"""
 
 long_test_string = "iqvaobnmweuylkctweghkwfekpbrdrgehfcsjjrnczwzicoug\
     lzfqvckvwkevcsxgcrjkzqegyyzdmrepsqbjdzzmunpgnxtqotw"
