@@ -41,4 +41,20 @@ Media types in computers:
 """
 
 
+"""
+Exercise:
 
+1. convert the following from binary to decimal
+    10010 => 18
+    11000 => 24
+
+2. convert from decimal to binary:
+    53 => 110101
+    15 => 1111
+    17 => 10001
+    20 => 10100
+    27 => 11011
+
+
+* The max number n binary digits can represent is (2^n-1)
+"""
