@@ -108,3 +108,43 @@ If we wanted to store a string with a length of 5 in memory that has 32-bit slot
 then each character would consist of 32-bits.
 So it would take a total of 160 bits to store the string (160 bits = 20 bytes).
 """
+
+
+
+"""
+Exercise 1: "709. To Lower Case" (https://leetcode.com/problems/to-lower-case/)
+
+Implement function toLowerCase() that has a string parameter str, and returns the same string in lowercase,
+without using the built in lower() function.
+
+* Examples:
+    "Hello" => "hello"
+    "HELLO" => "hello"
+    "h3l8L0" => "h3l8l0"
+    "hello" => "hello"
+
+* Hints:
+    ord(x) gets the encoding value of character
+    chr(x) converts letter to encoding value
+    lowercase equiv of upper case is charcater encoding +32
+"""
+
+def toLowerCase(input_str):
+    result = ""
+
+    for x in input_str:
+        num = ord(x)
+
+        if 65 <= num <=90:
+            num += 32
+            result += chr(num)
+        else:
+            result += x
+        
+    return result
+
+
+print(toLowerCase("Hello"))
+print(toLowerCase("HELLO"))
+print(toLowerCase("hello"))
+print(toLowerCase("h3l8L0"))
