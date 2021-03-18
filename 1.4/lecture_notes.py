@@ -180,3 +180,12 @@ Therefore, in Example 3, the input represents the signed integer -3.
     The input must be a binary string of length 32.
 
 """
+
+def numberOfOneBits(n: int):
+    return bin(n).count('1')
+
+
+print(numberOfOneBits(0o00000000000000000000000000001011))
+print(numberOfOneBits(0o00000000000000000000000010000000))
+print(numberOfOneBits(0o11111111111111111111111111111101))
+print(numberOfOneBits(0o00000000000110000001111111100010))
