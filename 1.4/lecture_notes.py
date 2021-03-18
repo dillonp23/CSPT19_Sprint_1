@@ -58,3 +58,53 @@ Exercise:
 
 * The max number n binary digits can represent is (2^n-1)
 """
+
+
+"""
+Primary components of computer relevant to us:
+
+1. CPU
+    - executes instructions
+    - the comp brain
+
+2. RAM
+    - random access memory
+    - temporary, fast
+    - 12*GB (128 * 10^9 bytes) of RAM in iMac Pro
+
+    - the working "scratchpad" of computer
+    - used to store code and data being actively used
+    - 
+
+3. Persistent Storage
+    - long term storage (SSD, HD)
+    - 2TB (2 x 10^12 bytes) of storage in an iMac Pro
+
+
+Numbers & Memory in Computers:
+- fixed-width integers
+    - i.e. no matter how large the value, each integer takes up same amount of space
+
+- computers typically use 32 bit or 64 bit
+- since they are fixed width:
+    - constant space
+    - operations are in constant time
+
+* if we reach the maximum number that a computer can represent what happens?
+    - number overflow!
+
+
+Arrays & Memory:
+    - RAM similar to an array/list
+    - each slot has fixed size
+    - fast indexing
+
+
+Strings & Memory:
+- a list of individual characters
+- either ASCII or Unicode
+
+If we wanted to store a string with a length of 5 in memory that has 32-bit slots, 
+then each character would consist of 32-bits.
+So it would take a total of 160 bits to store the string (160 bits = 20 bytes).
+"""
