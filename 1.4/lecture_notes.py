@@ -189,3 +189,42 @@ print(numberOfOneBits(0o00000000000000000000000000001011))
 print(numberOfOneBits(0o00000000000000000000000010000000))
 print(numberOfOneBits(0o11111111111111111111111111111101))
 print(numberOfOneBits(0o00000000000110000001111111100010))
+
+
+# import sys
+
+# def numberOfOneBits(n: int):
+#     orig_len = len(str(n))
+#     n = int(n)
+#     orig_size = sys.getsizeof(n)
+
+#     s = bin(n)
+#     prestrip = len(s)
+#     pre_size = sys.getsizeof(s)
+
+#     s_new = s.lstrip('-0b')
+#     poststrip = len(s_new)
+#     post_size = sys.getsizeof(s_new)
+
+#     print(f"Original length of input: {orig_len} \
+#         \n orig_size: {orig_size}\
+#         \n s_orig: {s}\
+#         \n prestrip length: {prestrip}\
+#         \n pre_size: {pre_size}\
+#         \n s_new: {s_new}\
+#         \n poststrip length: {poststrip}\
+#         \n post_size: {post_size}")
+
+# def numberOfOneBits(n):
+#     orig_size = sys.getsizeof(n)
+#     orig_info = sys.int_info
+
+#     s = bin(n)
+#     count = s.count('1')
+#     s_size = sys.getsizeof(s)
+
+#     print(f"orig_size: {orig_size}\
+#         \n orig_info: {orig_info}\
+#         \n s: {s}\
+#         \n count: {count}\
+#         \n s_size: {s_size}")
