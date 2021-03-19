@@ -41,4 +41,18 @@ Given an integer, write a function that reverses the bits (in binary) and return
 """
 
 def csReverseIntegerBits(n):
-    pass
+    # convert int to binary string
+    num_string = bin(n)
+
+    # strip prefix, reverse
+    num_string = num_string[2:][::-1]
+
+    # add prefix, convert to int(n, base=2)
+    return int(f"0b{num_string}", base=2)
+
+
+print(csReverseIntegerBits(417))
+print(csReverseIntegerBits(267))
+print(csReverseIntegerBits(2017))
+print(csReverseIntegerBits(1087))
+print(csReverseIntegerBits(0))
