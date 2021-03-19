@@ -147,3 +147,20 @@ leaving no remainder. Simplest way to test if a number is a factor of another is
     csRaindrops(34) -> "34"
     34 is not factored by 3, 5, or 7.
 """
+
+def csRaindrops(number):
+    dict = {3:"Pling", 5:"Plang", 7:"Plong"}
+    
+    result = "".join([dict[divisor] for divisor in dict if number % divisor == 0])
+    
+    if result != "":
+        return result
+    else:
+        return str(number)
+
+
+print(csRaindrops(28))
+print(csRaindrops(30))
+print(csRaindrops(34))
+print(csRaindrops(35))
+print(csRaindrops(17))
