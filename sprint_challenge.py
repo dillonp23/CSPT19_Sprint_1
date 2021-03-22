@@ -17,3 +17,23 @@ Given a string (the input will be in the form of an array of characters), write 
     - Avoid using any built-in reverse methods in the language you are using (the goal of this challenge is for you to 
     implement your own method).
 """
+
+def csReverseString(chars):
+    last_index = len(chars) - 1
+    
+    for i in range(int(len(chars)/2)):
+        temp = chars[i]
+        chars[i] = chars[last_index]
+        chars[last_index] = temp
+
+        last_index -= 1
+
+
+    return chars
+
+
+print(csReverseString([]))
+print(csReverseString(["a"]))
+print(csReverseString(["a", "b"]))
+print(csReverseString(["a", "b", "c"]))
+print(csReverseString(["a", "b", "c", "d", "e"]))
