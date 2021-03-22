@@ -136,4 +136,17 @@ for loop to iterate using the index rather than the character itself. By doing s
 was located at the last index of the string, and if so, would continue to check whether that word is in the resulting word 
 list. By rewriting the algorithm in this way, I eliminated the need for a separate conditional statement after the for loop. 
 This made the algorithm easier to understand and less verbose.
+
+
+Time & Space Complexity for Exercise 3:
+
+The time complexity for this solution is O(n) since we have to iterate through each character of the string. Off the top 
+of my head, I can't think of a way to improve this.
+
+The space complexity would be O(n) as well. We are creating a new list instance in order to store the words that appear 
+in the input string. If the word is already in the list, then we continue to the next word. The space needed for the list 
+to store the unique words will increase linearly as the input size increases. I suppose in some cases the space complexity 
+could be between O(n) and O(1) depending on how many times the word appears in the input string, but generally speaking 
+the space complexity will have to grow as the input size increases assuming that the input is not a string of many 
+repetitive words.
 """
