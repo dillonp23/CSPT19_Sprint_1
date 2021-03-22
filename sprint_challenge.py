@@ -89,8 +89,8 @@ Examples:
 * Notes:
 - Try to solve this challenge without using the reverse of the input string; use a for loop to iterate through the string and 
 make the necessary comparisons.
-- Something like the code below might be your first intuition, but can you figure out a way to use a for loop instead?
 
+- Something like the code below might be your first intuition, but can you figure out a way to use a for loop instead?
     def csCheckPalindrome(input_str):
         return input_str == "".join(reversed(input_str))
 """
@@ -113,6 +113,17 @@ print(csCheckPalindrome("anna"))
 print(csCheckPalindrome("12345"))
 print(csCheckPalindrome("12321"))
 print(csCheckPalindrome("teststring"))
+
+
+
+"""
+Summary & Explanation for Exercise 2:
+
+This problem was pretty much exactly the same as the first exercise, except in this instance, rather than swapping the two 
+elements, we are simply comparing the two. If the elements are not equal, we know that the input is not a palindrome, so we 
+immediately return false. If the two elements are equal at opposing ends of the string, then we continue through the loop. 
+If we complete the loop, we know that the input is a palindrome, so we return true.
+"""
 
 
 
