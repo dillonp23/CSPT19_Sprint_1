@@ -123,6 +123,15 @@ This problem was pretty much exactly the same as the first exercise, except in t
 elements, we are simply comparing the two. If the elements are not equal, we know that the input is not a palindrome, so we 
 immediately return false. If the two elements are equal at opposing ends of the string, then we continue through the loop. 
 If we complete the loop, we know that the input is a palindrome, so we return true.
+
+
+Time & Space Complexity for Exercise 2:
+
+The time complexity is O(n). As the size of the input string grows, the time will increase at a rate of n/2, as we are 
+iterating half of the input string each time we call the function.
+
+The space complexity is O(1) because we are not initializing any instances of a new object. The space complexity will always 
+be constant to the input size.
 """
 
 
