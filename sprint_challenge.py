@@ -40,6 +40,25 @@ print(csReverseString(["a", "b", "c", "d", "e"]))
 
 
 
+"""
+Summary & Explanation for Exercise 1:
+
+I immediately knew how to go about this by using list slicing, but realized that wouldn't do as a solution since we were 
+instructed not to use built in functionality. Obviously the  easiest solution would simply be "return chars[::-1]" however 
+this is not acceptable in this circumstance. 
+
+I planned to use the two pointers technique in order to iterate the list and at each index, swap the characters at opposite 
+ends of the list. To do this I used  a temporary pointer to store the value for the first index, updated the value at the 
+first index to the last index, and updated the last index with the temp variable. 
+
+At first I was iterating the entire list and returning the list but this was giving the list back in the original order. 
+I realized that I was swapping the indexes all the way through, so after getting past the first half of the array, doing 
+the same swap method would return the list to its original state. I realized that I needed to only iterate up to the length 
+of the list divided by 2, as stopping at the halfway mark is necessary to prevent reverting the list to the same order as the input.
+"""
+
+
+
 
 """
 Exercise 2
