@@ -1,5 +1,4 @@
 
-# Sprint 1 - Final Assessment
 
 """
 Exercise 1
@@ -55,6 +54,19 @@ At first I was iterating the entire list and returning the list but this was giv
 I realized that I was swapping the indexes all the way through, so after getting past the first half of the array, doing 
 the same swap method would return the list to its original state. I realized that I needed to only iterate up to the length 
 of the list divided by 2, as stopping at the halfway mark is necessary to prevent reverting the list to the same order as the input.
+
+
+Time & Space Complexity for Exercise 1:
+
+The time complexity of this solution would be O(n) - linear. The exact time complexity would be O(n/2), which would simplify to O(n). 
+This is because we are only iterating through half of the input list each time the function is called. Although we're not iterating 
+the entire list, it wouldn't be O(log n) - logarithmic time, because the time is not getting halved with each iteration. We are simply 
+halving the number of iterations needed for a given input size each time method is called, rather than halving the number of iterations 
+with each iteration of the loop. 
+
+The space complexity is O(1) - constant. This is because we are changing the list in-place, meaning we are not creating a new instance 
+of a list in order to store the values as we reverse each element of the list. For this reason, the space complexity remains constant 
+with regards to an increase in input size.
 """
 
 
