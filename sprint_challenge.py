@@ -121,3 +121,19 @@ def csRemoveDuplicateWords(input_str):
 print(csRemoveDuplicateWords("alpha bravo bravo golf golf golf delta alpha bravo bravo golf golf golf delta"))
 print(csRemoveDuplicateWords("my dog is my dog is super smart"))
 print(csRemoveDuplicateWords("this is only a test string test"))
+
+
+
+"""
+Summary & Explanation for Exercise 3:
+
+I ran into a few issues while solving this problem. I started out by trying to build a result string to return, 
+but realized it was better to use a list and return that using the join method, using a single space as the separator. 
+Doing so eliminated the need to add an additional space between words and kept things more straight forward for the algorithm.
+
+One issue I ran into was not having the last word be added to the resulting string. To remediate this issue, I changed my 
+for loop to iterate using the index rather than the character itself. By doing so, I was able to check if the character
+was located at the last index of the string, and if so, would continue to check whether that word is in the resulting word 
+list. By rewriting the algorithm in this way, I eliminated the need for a separate conditional statement after the for loop. 
+This made the algorithm easier to understand and less verbose.
+"""
