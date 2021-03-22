@@ -63,3 +63,22 @@ make the necessary comparisons.
     def csCheckPalindrome(input_str):
         return input_str == "".join(reversed(input_str))
 """
+
+def csCheckPalindrome(input_str):
+    length = len(input_str)
+    last_index = length - 1
+
+    for i in range(int(length/2)):
+        if input_str[i] != input_str[last_index]:
+            return False
+        
+        last_index -= 1
+
+    return True
+
+
+print(csCheckPalindrome("racecar"))
+print(csCheckPalindrome("anna"))
+print(csCheckPalindrome("12345"))
+print(csCheckPalindrome("12321"))
+print(csCheckPalindrome("teststring"))
